@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>  
+    <data>
+        <menuitem id="menu_libreria_root" name="Biblioteca" sequence="1"/>
+
+        <menuitem id="menu_libreria_libros" name="Libros" parent="menu_libreria_root" action="action_libreria_libros" sequence="2"/>
+        <menuitem id="menu_libreria_autores" name="Autores" parent="menu_libreria_root" action="action_libreria_autores" sequence="3"/>
+        <menuitem id="menu_libreria_categorias" name="Categorías" parent="menu_libreria_root" action="action_libreria_categorias" sequence="4"/>
+        <menuitem id="menu_libreria_prestamos" name="Préstamos" parent="menu_libreria_root" action="action_libreria_prestamos" sequence="5"/>
+        <menuitem id="menu_libreria_usuarios" name="Usuarios" parent="menu_libreria_root" action="action_libreria_usuarios" sequence="6"/>
+    </data>
+</odoo>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_libreria_libro_tree" model="ir.ui.view">
+        <field name="name">libreria.libro.tree</field>
+        <field name="model">libreria_libro</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="title"/>
+                <field name="author"/>
+                <field name="category"/>
+                <field name="copies"/>
+            </tree>
+        </field>
+    </record>
+
+<record id="action_libreria_libros" model="ir.actions.act_window">
+    <field name="name">Libros</field>
+    <field name="res_model">libreria_libro</field>
+    <field name="view_mode">tree,form</field>
+</record>
+</odoo>
