@@ -11,7 +11,11 @@
         'views/libreria_libro_view.xml',
         'views/libreria_prestamo_view.xml',
         'views/libreria_usuario_view.xml',
-        'views/libreria_menu_view.xml'
+        'views/libreria_menu_view.xml',
+        'report/prestamo_report_activo.xml',
+        'report/prestamo_report_historial.xml',
+        'report/libro_report.xml',
+        'report/usuario_report.xml'
     ],
     'installable': True,
     'aplication': True,

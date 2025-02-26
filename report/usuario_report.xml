@@ -1,1 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_biblioteca_loan_report_history" model="ir.actions.report">
+        <field name="name">Informe de Usuarios</field>
+        <field name="model">libreria_usuario</field>
+        <field name="report_name">TrabajoModulo.report_usuario_biblioteca</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="binding_model_id" ref="model_libreria_usuario"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="report_usuario_biblioteca">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="libreria_usuario">
+                <div class="page">
+                    <h2> Informe de Prestamo </h2>
+                    <p><strong>Usuario:</strong> <t t-esc="libreria_usuario.name"/></p>
+                    <p><strong>Email:</strong> <t t-esc="libreria_usuario.email"/></p>
+                    <p><strong>Telefono:</strong> <t t-esc="libreria_usuario.phone"/></p>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

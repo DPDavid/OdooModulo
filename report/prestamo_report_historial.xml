@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_biblioteca_loan_report_history" model="ir.actions.report">
+        <field name="name">Informe de Prestamos</field>
+        <field name="model">libreria_prestamo</field>
+        <field name="report_name">TrabajoModulo.report_prestamo_historial</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="binding_model_id" ref="model_libreria_prestamo"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="report_prestamo_historial">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="libreria_prestamo">
+                <div class="page">
+                    <h2> Informe de Prestamo </h2>
+                    <p><strong>Usuario:</strong> <t t-esc="libreria_prestamo.user_id.name"/></p>
+                    <p><strong>Libro:</strong> <t t-esc="libreria_prestamo.book_id.title"/></p>
+                    <p><strong>Fecha Prestamo:</strong> <t t-esc="libreria_prestamo.loan_date"/></p>
+                    <p><strong>Fecha Devolucion:</strong> <t t-esc="libreria_prestamo.return_date"/></p>
+                    <p><strong>Estado:</strong> <t t-esc="libreria_prestamo.status"/></p>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>
