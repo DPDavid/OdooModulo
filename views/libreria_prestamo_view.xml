@@ -8,16 +8,16 @@
             <form>
                 <sheet>
                     <group>
-                        <field name="user_id"/>
-                        <field name="book_id"/>
-                        <field name="loan_date"/>
-                        <field name="return_date"/>
-                        <field name="status"/>
+                        <field name="user_id" />
+                        <field name="book_id" />
+                        <field name="loan_date" />
+                        <field name="return_date" />
+                        <field name="status" />
                     </group>
                     <footer>
                         <button name="action_return_book" string="Registrar Devolución"
-                                type="object" class="btn-primary"
-                                invisible="context.get('hide_return', False)"/>
+                            type="object" class="btn-primary"
+                            invisible="context.get('hide_return', False)" />
                     </footer>
                 </sheet>
             </form>
@@ -30,12 +30,12 @@
         <field name="model">libreria_prestamo</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="id"/>
-                <field name="user_id"/> 
-                <field name="book_id"/> 
-                <field name="loan_date"/> 
-                <field name="return_date"/>
-                <field name="status"/> 
+                <field name="id" />
+                <field name="user_id" />
+                <field name="book_id" />
+                <field name="loan_date" />
+                <field name="return_date" />
+                <field name="status" />
             </tree>
         </field>
     </record>
@@ -45,5 +45,5 @@
         <field name="name">Préstamos</field>
         <field name="res_model">libreria_prestamo</field>
         <field name="view_mode">tree,form</field>
-    </record>
+    </record>S
 </odoo>

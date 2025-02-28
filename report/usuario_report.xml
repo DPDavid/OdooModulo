@@ -5,18 +5,82 @@
         <field name="model">libreria_usuario</field>
         <field name="report_name">TrabajoModulo.report_usuario_biblioteca</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="binding_model_id" ref="model_libreria_usuario"/>
+        <field name="binding_model_id" ref="model_libreria_usuario" />
         <field name="binding_type">report</field>
     </record>
 
     <template id="report_usuario_biblioteca">
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="libreria_usuario">
+                <style type="text/css">
+                    .page {
+                    font-family: "Arial", sans-serif;
+                    margin: 20px;
+                    padding: 20px;
+                    border: 2px solid #007bff;
+                    border-radius: 10px;
+                    background-color: #f8f9fa;
+                    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+                    }
+
+                    h2 {
+                    color: #007bff;
+                    text-align: center;
+                    border-bottom: 2px solid #007bff;
+                    padding-bottom: 5px;
+                    font-size: 22px;
+                    }
+
+                    p {
+                    font-size: 16px;
+                    color: #333;
+                    margin: 8px 0;
+                    }
+
+                    p strong {
+                    color: #0056b3;
+                    }
+
+                    table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin-top: 10px;
+                    }
+
+                    th, td {
+                    border: 1px solid #007bff;
+                    padding: 8px;
+                    text-align: left;
+                    }
+
+                    th {
+                    background-color: #007bff;
+                    color: white;
+                    font-weight: bold;
+                    }
+
+                    tr:nth-child(even) {
+                    background-color: #f2f2f2;
+                    }
+
+                    tr:hover {
+                    background-color: #e9ecef;
+                    }
+                </style>
                 <div class="page">
                     <h2> Informe de Prestamo </h2>
-                    <p><strong>Usuario:</strong> <t t-esc="libreria_usuario.name"/></p>
-                    <p><strong>Email:</strong> <t t-esc="libreria_usuario.email"/></p>
-                    <p><strong>Telefono:</strong> <t t-esc="libreria_usuario.phone"/></p>
+                    <p>
+                        <strong>Usuario:</strong>
+                        <t t-esc="libreria_usuario.name" />
+                    </p>
+                    <p>
+                        <strong>Email:</strong>
+                        <t t-esc="libreria_usuario.email" />
+                    </p>
+                    <p>
+                        <strong>Telefono:</strong>
+                        <t t-esc="libreria_usuario.phone" />
+                    </p>
                 </div>
             </t>
         </t>
