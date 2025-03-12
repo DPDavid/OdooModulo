@@ -45,5 +45,5 @@
         <field name="name">Préstamos</field>
         <field name="res_model">libreria_prestamo</field>
         <field name="view_mode">tree,form</field>
-    </record>S
+    </record>
 </odoo>
